@@ -25,3 +25,4 @@ alias term_config='nvim ~/.config/ghostty/config'
 
 alias ssh='sshs'
 alias sftp='termscp'
+alias redis='ratisui'

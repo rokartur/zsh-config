@@ -25,8 +25,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 # auto-completion settings 
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' completer _complete _ignored
-zstyle ':completion:*:ignore-parents' ignore _
 zstyle ':completion:*' insert-tab false
 zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '[%d]'
@@ -41,6 +39,12 @@ zstyle ':fzf-tab:*' continuous-trigger 'right'
 zstyle ':fzf-tab:complete:*' hide-group-if-empty yes
 
 zstyle ':fzf-tab:*' switch-group '[' ']'
+
+zstyle ':fzf-tab:complete:*' file-sort-dirs-first true
+zstyle ':fzf-tab:complete:*' recursive-path-completion yes
+zstyle ':fzf-tab:complete:cd:*' recursive-path-completion yes
+zstyle ':fzf-tab:complete:*' path-directories true
+
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always --color-scale=all --color-scale-mode=fixed -1 $realpath 2>/dev/null | grep -vE "^\./\$|^\.\./\$" || echo "No preview available"'
 zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers $realpath 2>/dev/null || echo "No preview available"'
 zstyle ':fzf-tab:complete:code:*' fzf-preview 'bat --color=always --style=numbers $realpath 2>/dev/null || echo "No preview available"'
@@ -66,6 +70,7 @@ zsh-defer source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.z
 zsh-defer source ~/.zsh/plugins/zsh-httpie-request-manager/zsh-httpie-request-manager.plugin.zsh
 
 # scripts
+zsh-defer source ~/.zsh/scripts/print-header.zsh
 zsh-defer source ~/.zsh/scripts/update.zsh
 zsh-defer source ~/.zsh/scripts/clear-cache.zsh
 

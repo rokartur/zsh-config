@@ -1,19 +1,19 @@
 #/usr/bin/env zsh
 
-clear_cache() {
+clear-cache() {
   local folders_to_delete=(
-      "/Users/artur/.bun/install"
-      "/Users/artur/.npm"
-      "/Users/artur/Movies/TV"
-      "/Users/artur/Music/Music"
-      "/Users/artur/Library/Application Support/discord/cache"
-      "/Users/artur/Library/Application Support/Code/CachedExtensionVSIXs"
-      "/Users/artur/Library/Application Support/Code/CachedData"
-      "/Users/artur/Library/Application Support/Code/GPUCache"
-      "/Users/artur/Library/Application Support/Code/Cache"
-      "/Users/artur/Library/Caches/BraveSoftware"
-      "/Users/artur/Library/Caches/Homebrew"
-      "/Users/artur/Library/Application Support/discord/logs"
+      "$HOME/.bun/install"
+      "$HOME/.npm"
+      "$HOME/Movies/TV"
+      "$HOME/Music/Music"
+      "$HOME/Library/Application Support/discord/cache"
+      "$HOME/Library/Application Support/Code/CachedExtensionVSIXs"
+      "$HOME/Library/Application Support/Code/CachedData"
+      "$HOME/Library/Application Support/Code/GPUCache"
+      "$HOME/Library/Application Support/Code/Cache"
+      "$HOME/Library/Caches/BraveSoftware"
+      "$HOME/Library/Caches/Homebrew"
+      "$HOME/Library/Application Support/discord/logs"
   )
   # "/Users/artur/Library/Caches/com.spotify.client/Data"
   echo "Starting folder cleanup..."

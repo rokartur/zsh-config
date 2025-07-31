@@ -24,8 +24,5 @@ alias fetch='fastfetch'
 alias zsh_config='nvim ~/.zshrc'
 alias term_config='nvim ~/.config/ghostty/config'
 
-alias brewup='brew update; brew upgrade; brew cleanup -s; brew doctor'
-alias update='bun upgrade; upgrade_plugins; brewup'
-
 alias ssh='sshs'
 alias sftp='termscp'

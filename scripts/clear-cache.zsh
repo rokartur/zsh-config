@@ -14,11 +14,11 @@ clear_cache() {
       "/Users/artur/Library/Caches/BraveSoftware"
       "/Users/artur/Library/Caches/Homebrew"
       "/Users/artur/Library/Application Support/discord/logs"
-      "/Users/artur/Library/Caches/com.spotify.client/Data"
   )
+  # "/Users/artur/Library/Caches/com.spotify.client/Data"
   echo "Starting folder cleanup..."
   echo "Number of folders to process: ${#folders_to_delete[@]}"
-    
+
   if command -v trash >/dev/null 2>&1; then
       for folder in "${folders_to_delete[@]}"; do
           if [[ -d "$folder" ]]; then

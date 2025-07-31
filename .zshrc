@@ -22,6 +22,8 @@ setopt auto_cd globdots inc_append_history share_history hist_ignore_dups hist_r
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
+ZSH_TAB_TITLE_ENABLE_FULL_COMMAND=true
+ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 
 # auto-completion settings 
 zstyle ':completion:*' use-cache on
@@ -30,7 +32,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '[%d]'
 
 zstyle ':fzf-tab:*' prefix ''
-zstyle ':fzf-tab:*' show-group brief
+zstyle ':fzf-tab:*' show-group all
 zstyle ':fzf-tab:*' single-group color header
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab' fzf-tab-completion yes
@@ -65,6 +67,7 @@ zsh-defer source ~/.zsh/aliases/general.zsh
 zsh-defer source ~/.zsh/aliases/eza.zsh
 
 # plugins
+# source ~/.zsh/plugins/zsh-tab-title/zsh-tab-title.plugin.zsh
 zsh-defer source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 zsh-defer source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 zsh-defer source ~/.zsh/plugins/zsh-httpie-request-manager/zsh-httpie-request-manager.plugin.zsh
@@ -76,12 +79,12 @@ zsh-defer source ~/.zsh/scripts/clear-cache.zsh
 
 # homebrew
 if [[ -z "$HOMEBREW_PREFIX" ]]; then
-  zsh-defer eval "$(/opt/homebrew/bin/brew shellenv)"
+  zsh-defer eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 # zoxide
 if ! command -v __zoxide_z &> /dev/null; then
-  zsh-defer eval "$(zoxide init zsh --cmd cd)"
+  zsh-defer eval $(zoxide init zsh --cmd cd)
 fi
 
 # bun
@@ -98,10 +101,6 @@ path=(
   /usr/sbin
   /sbin
   /System/Cryptexes/App/usr/bin
-  /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin
-  /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin
-  /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
-  /Applications/Ghostty.app/Contents/MacOS
   $HOME/.bun/bin
   $HOME/.local/bin
 )

@@ -17,8 +17,6 @@ alias 9='cd -9'
 
 alias _='sudo '
 alias cls='clear'
-alias h='history'
-alias history='fzf-history-widget'
 alias fetch='fastfetch'
 
 alias zsh_config='nvim ~/.zshrc'

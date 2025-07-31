@@ -19,6 +19,7 @@ alias _='sudo '
 alias cls='clear'
 alias h='history'
 alias history='fzf-history-widget'
+alias fetch='fastfetch'
 
 alias zsh_config='nvim ~/.zshrc'
 alias term_config='nvim ~/.config/ghostty/config'

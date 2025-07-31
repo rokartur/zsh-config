@@ -4,7 +4,7 @@ eval "$(starship init zsh)"
 
 export STARSHIP_CONFIG=~/.zsh/starship/starship.toml
 export STARSHIP_CACHE=~/.zsh/starship/cache
-export FZF_DEFAULT_OPTS="
+FZF_DEFAULT_OPTS="
 --border=none
 --border-label-pos=bottom
 --multi
@@ -13,7 +13,7 @@ export FZF_DEFAULT_OPTS="
 --cycle
 --ansi
 --color=bg:#000000,fg:#e2e2e2
---color=hl:#646464,hl+:#e2e2e2
+--color=hl:#00d061,hl+:#e2e2e2
 --color=fg+:#f1f1f1,bg+:#222222
 --color=info:#00c4db,pointer:#ff8673,marker:#00d061,spinner:#8fa9ff,prompt:#d4a800,header:#ffffff
 "
@@ -79,12 +79,12 @@ zsh-defer source ~/.zsh/scripts/clear-cache.zsh
 
 # homebrew
 if [[ -z "$HOMEBREW_PREFIX" ]]; then
-  zsh-defer eval $(/opt/homebrew/bin/brew shellenv)
+  zsh-defer eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # zoxide
 if ! command -v __zoxide_z &> /dev/null; then
-  zsh-defer eval $(zoxide init zsh --cmd cd)
+  zsh-defer eval "$(zoxide init zsh --cmd cd)"
 fi
 
 # bun

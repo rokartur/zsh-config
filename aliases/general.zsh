@@ -18,6 +18,7 @@ alias 9='cd -9'
 alias _='sudo '
 alias cls='clear'
 alias fetch='fastfetch'
+alias delete='rm -rf'
 
 alias zsh_config='nvim ~/.zshrc'
 alias term_config='nvim ~/.config/ghostty/config'

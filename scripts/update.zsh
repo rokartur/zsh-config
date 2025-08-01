@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 update() {
   local now
   local plugins_dir="${ZDOTDIR:-$HOME}/.zsh/plugins"

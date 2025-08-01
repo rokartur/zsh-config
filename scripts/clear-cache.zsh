@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 clear-cache() {
   local folders_to_delete=(
       "$HOME/.bun/install"

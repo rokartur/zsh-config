@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 print_header() {
   local line_width=70
   local now name text_len dash_count dashes

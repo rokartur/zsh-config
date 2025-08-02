@@ -70,7 +70,6 @@ zsh-defer source ~/.zsh/aliases/eza.zsh
 zsh-defer source ~/.zsh/plugins/zsh-tab-title/zsh-tab-title.plugin.zsh
 zsh-defer source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 zsh-defer source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-zsh-defer source ~/.zsh/plugins/zsh-httpie-request-manager/zsh-httpie-request-manager.plugin.zsh
 
 # scripts
 zsh-defer source ~/.zsh/scripts/print-header.zsh

@@ -27,3 +27,4 @@ alias ssh='sshs'
 alias sftp='termscp' # sftp client
 alias redis='ratisui' # redis client
 alias api='atac' # rest api client
+alias sql='lazysql' # sql client

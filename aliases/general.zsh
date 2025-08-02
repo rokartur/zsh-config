@@ -24,5 +24,6 @@ alias zsh_config='nvim ~/.zshrc'
 alias term_config='nvim ~/.config/ghostty/config'
 
 alias ssh='sshs'
-alias sftp='termscp'
-alias redis='ratisui'
+alias sftp='termscp' # sftp client
+alias redis='ratisui' # redis client
+alias api='atac' # rest api client
